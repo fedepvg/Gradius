@@ -91,8 +91,7 @@
       <AdditionalDependencies>raylib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir "$(TargetDir)res"
-xcopy "$(SolutionDir)res" "$(TargetDir)res"/E /y /s</Command>
+      <Command>$(ProjectDir)copiador.bat "$(TargetDir)" "$(SolutionDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
